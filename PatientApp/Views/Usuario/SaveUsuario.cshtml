@@ -1,0 +1,120 @@
+﻿@model PatientApp.Core.Application.ViewModels.Usuarios.SaveUsuarioViewModel;
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "SaveUsuario";
+}
+<form method="post" asp-controller="Usuario" asp-action="@(editMode ? "Update":"Create")">
+
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-body">
+
+                @*----------ID----------*@
+
+                <input type="hidden" asp-for="Id" />
+
+                @*----------Nombre----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">First Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Nombre" class="form-control">
+                    </div>
+                </div>
+
+                @*----------Apellido----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Last Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Apellido" class="form-control">
+                    </div>
+                </div>
+
+                @*----------Correo----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Correo" class="form-control">
+                    </div>
+                </div>
+
+                @*----------NickName----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">NickName</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Nombre_Usuario" class="form-control">
+                    </div>
+                </div>
+
+                @*----------Password----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Password</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Password" class="form-control">
+                    </div>
+                </div>
+
+                @*----------Confirm Password----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Confirm Password</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Confirm_Password" class="form-control">
+                    </div>
+                </div>
+
+                @*----------Role----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Role</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+
+                        <select class="form-select" asp-for="Tipo_Usuario" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="Asistente">Asistente</option>
+                            <option value="Administrador">Administrador</option>
+                        </select>
+
+                    </div>
+                </div>
+
+
+
+                @*----------Buttons----------*@
+
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-secondary">
+                        <center>
+
+                            <button type="submit" class="btn btn-primary px-4">Save Changes</button>
+                            <a asp-controller="Usuario" asp-action="Index" class="btn btn-danger">Cancelar</a>
+
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</form>

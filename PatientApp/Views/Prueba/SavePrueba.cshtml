@@ -1,0 +1,43 @@
+﻿@model PatientApp.Core.Application.ViewModels.Pruebas.SavePruebaViewModel
+
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Creating Test";
+}
+<form method="post" asp-controller="Prueba" asp-action="@(editMode ? "Update":"Create")">
+
+    <div class="card col-6 offset-3">
+        <div class="card-header bg-success text-center text-light">
+            <h4>@(editMode ? $"Editando Prueba: {Model.Prueba}" : "Creando Prueba")</h4>
+        </div>
+
+        <div class="card body">
+            
+            <div class="d-flex flex-column align-items-center text-center">
+                
+                <div class=" mb-3">
+
+                    <center>
+                        
+                        <br />
+                        <input type="text" asp-for="Prueba" class="form-control" />
+                        <span asp-validation-for="Prueba" class="text-danger"></span>
+
+                        <br />
+                        
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a asp-controller="Prueba" asp-action="Index" class="btn btn-danger">Cancelar</a>
+                    
+                    </center>
+
+                    <hr class="my-4">
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+</form>

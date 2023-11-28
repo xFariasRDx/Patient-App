@@ -1,0 +1,125 @@
+﻿@model PatientApp.Core.Application.ViewModels.Pacientes.SavePacienteViewModel
+
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Patient Registration";
+}
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+
+                        <h4 class="mb-4 pb-2 pb-md-0 mb-md-5 inputcentrado">
+                            @(editMode ? $"Editando Paciente: {Model.Nombre + Model.Apellido}"
+                                : "📜Registration Form📜")
+                        </h4>
+
+                        <form method="post" enctype="multipart/form-data" asp-controller="Paciente" asp-action="@(editMode ? "Update":"Create")">
+
+                            <input type="hidden" asp-for="Id" />
+
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline">
+                                    <label asp-for="Nombre" class="form-label">First Name</label>
+                                    <input type="text" asp-for="Nombre" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline">
+                                    <label asp-for="Apellido" class="form-label align-text-bottom">Last Name</label>
+                                    <input type="text" asp-for="Apellido" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline datepicker w-100">
+                                    <label asp-for="Telefono" class="form-label">Cell Phone</label>
+                                    <input type="text" asp-for="Telefono" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline datepicker w-100">
+                                    <label asp-for="Direccion" class="form-label">Direction</label>
+                                    <input type="text" asp-for="Direccion" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline datepicker w-100">
+                                    <label asp-for="Cedula" class="form-label">Cedula</label>
+                                    <input type="text" asp-for="Cedula" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Cedula" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline datepicker w-100">
+                                    <label asp-for="Fecha_Nacimiento" class="form-label">Fecha Nacimiento</label>
+                                    <input asp-for="Fecha_Nacimiento" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Fecha_Nacimiento" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row col-md-12 mb-3 inputcentrado">
+
+                                <div class="form-outline datepicker w-100">
+                                    <label asp-for="Img_Upload" class="form-label">Select a image</label>
+                                    <input required asp-for="Img_Upload" class="form-control form-control-lg" />
+                                    <span asp-validation-for="Img_Upload" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-check row col-md-12 mb-3">
+
+                                <label asp-for="Fumador" class="form-check-label">Fumador</label>
+                                <input asp-for="Fumador" class="form-check-input" type="checkbox">
+
+                            </div>
+
+                            <div class="form-check row col-md-12 mb-3">
+
+                                <label asp-for="Alergias" class="form-check-label">Alergias</label>
+                                <input asp-for="Alergias" class="form-check-input" type="checkbox">
+
+                            </div>
+
+
+                            <center>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <a asp-controller="Paciente" asp-action="Index" class="btn btn-danger">Cancelar</a>
+                            </center>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<PatientApp.Core.Application.ViewModels.Pacientes.PacienteViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    <div class="album py-5 row py-lg-5">
+        <center>
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-bold fw-light">Patient Maintenance</h1>
+                <p class="lead text-muted">Here you can create new patient</p>
+            </div>
+        </center>
+
+    </div>
+
+    <div class="d-xl-flex flex-column justify-content-center align-content-md-center mb-5 ">
+        <a asp-controller="Paciente" asp-action="Create" class="btn btn-outline-success">New Patient</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header text-center text-light fw-bold bg-secondary">
+
+        <h2>📜Register📜</h2>
+
+    </div>
+
+    <div class="card-body">
+        <table class="table table-striped table-hover text-center">
+            
+            <thead>
+                <tr>
+                <th>Perfil</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cedula</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Fecha Nacimiento</th>
+                <th>Fumador</th>
+                <th>Alergias</th>
+                <th>Tokens</th>
+                 </tr>
+            </thead>
+
+             @foreach (PatientApp.Core.Application.ViewModels.Pacientes.PacienteViewModel pvm in Model)
+             {
+                <tbody>
+                    <tr>
+                        <td><img src="@pvm.Img_Paciente" class="rounded-2 bg-secondary" width="50"/></td>
+                        <td>@pvm.Nombre</td>
+                        <td>@pvm.Apellido</td>
+                        <td>@pvm.Cedula</td>
+                        <td>@pvm.Direccion</td>
+                        <td>@pvm.Telefono</td>
+                        <td>@pvm.Fecha_Nacimiento</td>
+                        <td>@pvm.Fumador</td>
+                        <td>@pvm.Alergias</td>
+                        <td>
+                                
+                            <a asp-controller="Paciente" asp-action="Update" asp-route-Id="@pvm.Id" class=" btn btn-outline-warning"><i class="material-icons">✏️</i>Editar</a>
+                            <a asp-controller="Paciente" asp-action="Delete" asp-route-Id="@pvm.Id" class=" btn btn-outline-danger"><i class="material-icons">🗑️</i> Eliminar</a>
+
+                        </td>
+                    </tr>
+            
+                </tbody>
+             }   
+
+        </table>
+    </div>
+</div>

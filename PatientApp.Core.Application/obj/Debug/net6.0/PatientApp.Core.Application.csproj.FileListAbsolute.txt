@@ -1,0 +1,15 @@
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\bin\Debug\net6.0\PatientApp.Core.Application.deps.json
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\bin\Debug\net6.0\PatientApp.Core.Application.dll
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\bin\Debug\net6.0\PatientApp.Core.Application.pdb
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\bin\Debug\net6.0\PatientApp.Core.Domain.dll
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\bin\Debug\net6.0\PatientApp.Core.Domain.pdb
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.csproj.AssemblyReference.cache
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.AssemblyInfoInputs.cache
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.AssemblyInfo.cs
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.csproj.CopyComplete
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.dll
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\refint\PatientApp.Core.Application.dll
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\PatientApp.Core.Application.pdb
+C:\Users\Miguel Farias\source\repos\PatientApp\PatientApp.Core.Application\obj\Debug\net6.0\ref\PatientApp.Core.Application.dll

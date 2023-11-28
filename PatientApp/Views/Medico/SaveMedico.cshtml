@@ -1,0 +1,97 @@
+﻿@model PatientApp.Core.Application.ViewModels.Medicos.SaveMedicoViewModel;
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Save Medico";
+}
+<form method="post" asp-controller="Medico" asp-action="@(editMode ? "Update":"Create")">
+                            
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-body">
+               
+                    @*----------ID----------*@
+
+                <input type="hidden" asp-for="Id" />
+
+                    @*----------Nombre----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">First Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Nombre" class="form-control">
+                    </div>
+                </div>
+
+                    @*----------Apellido----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Last Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Apellido" class="form-control">
+                    </div>
+                </div>
+
+                    @*----------Correo----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Correo" class="form-control">
+                    </div>
+                </div>
+
+                    @*----------Telefono----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Telefono" class="form-control">
+                    </div>
+                </div>
+            
+                    @*----------Cedula----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Cedula" class="form-control">
+                    </div>
+                </div>
+
+                    @*----------Profile----------*@
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Profile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" asp-for="Img_Medico" class="form-control">
+                    </div>
+                </div>
+
+                    @*----------Buttons----------*@
+
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-secondary">
+                        <button type="submit" class="btn btn-primary px-4">Save Changes</button>
+                        <a asp-controller="Medico" asp-action="Index" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</form>
